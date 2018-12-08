@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Siren</string>
+    <string name="title_activity_main_map">Map</string>
+
+
+    <string name="email_hint">Username or E-mail</string>
+    <string name="Password_hint">Password</string>
+
+</resources>

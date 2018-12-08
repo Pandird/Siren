@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".request_confirmation"
+    android:background="@drawable/gradiant">
+<com.google.android.gms.maps.MapView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/mapview"
+
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+
+    app:layout_constraintBottom_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/street_name"
+    >
+
+</com.google.android.gms.maps.MapView>
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+
+        android:background="@mipmap/confirmiation_button"
+
+        app:layout_constraintBottom_toTopOf="@id/description_textbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+
+        />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Description:"
+        android:textColor="#90FFFFFF"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="40dp"
+
+        app:layout_constraintBottom_toTopOf="@id/street_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description_textbox"
+        />
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/street_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/stree_name_texbox"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+
+        android:textAlignment="center"
+        android:hint="Street Name"
+        android:textColorHint="#49FFFFFF"
+        android:paddingTop="7dp"
+
+        app:layout_constraintBottom_toTopOf="@id/description_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mapview"
+        />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/description_textbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/description_texbox"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="30dp"
+
+        android:hint="type your description here"
+        android:textAlignment="center"
+        android:textColorHint="#49FFFFFF"
+
+        app:layout_constraintBottom_toTopOf="@id/confirm_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description_text"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
