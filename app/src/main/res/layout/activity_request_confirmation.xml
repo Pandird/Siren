@@ -7,12 +7,12 @@
     tools:context=".request_confirmation"
     android:background="@drawable/gradiant">
 <com.google.android.gms.maps.MapView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
     android:id="@+id/mapview"
 
     android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
+    android:layout_marginTop="40dp"
     android:layout_marginEnd="8dp"
     android:layout_marginBottom="8dp"
 
@@ -54,9 +54,9 @@
         android:textAllCaps="true"
 
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="90dp"
 
         app:layout_constraintBottom_toTopOf="@id/street_name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,9 +70,9 @@
         android:background="@mipmap/stree_name_texbox"
 
         android:layout_marginStart="8dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="30dp"
 
         android:textAlignment="center"
         android:hint="Street Name"
@@ -92,7 +92,7 @@
         android:background="@mipmap/description_texbox"
 
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="30dp"
 
@@ -105,6 +105,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/description_text"
         />
-
 
 </android.support.constraint.ConstraintLayout>
