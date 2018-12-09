@@ -7,90 +7,118 @@
     tools:context=".account_settings"
     android:background="#E7E7E7">
 
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/account_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/logo"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="40dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/first_name"/>
+
+
     <android.support.v7.widget.AppCompatEditText
-        android:id="@+id/edit_fname"
-        android:layout_width="match_parent"
+        android:id="@+id/first_name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@mipmap/edit_first_name_section"
 
         android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="5dp"
 
-        app:layout_constraintBottom_toTopOf="@id/edit_lname"
-        app:layout_constraintTop_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_image"
+        app:layout_constraintBottom_toTopOf="@id/last_name"
+
+        android:hint="First Name"
+        android:paddingLeft="100dp"
         />
 
     <android.support.v7.widget.AppCompatEditText
-        android:id="@+id/edit_lname"
-        android:layout_width="match_parent"
+        android:id="@+id/last_name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@mipmap/edit_last_name_section"
 
         android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="3dp"
 
-        app:layout_constraintBottom_toTopOf="@id/edit_fname"
-        app:layout_constraintTop_toBottomOf="@id/edit_phone_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/first_name"
+        app:layout_constraintBottom_toTopOf="@id/phone_number"
+
+        android:hint="Last Name"
+        android:paddingLeft="100dp"/>
 
     <android.support.v7.widget.AppCompatEditText
-        android:id="@+id/edit_phone_number"
-        android:layout_width="match_parent"
+        android:id="@+id/phone_number"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@mipmap/edit_phone_number_section"
 
         android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="3dp"
 
-        app:layout_constraintBottom_toTopOf="@id/edit_email"
-        app:layout_constraintTop_toBottomOf="@id/edit_lname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_name"
+        app:layout_constraintBottom_toTopOf="@id/email"
+
+        android:hint="+01007575761"
+        android:paddingLeft="130dp"
         />
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/edit_email"
-        android:layout_width="match_parent"
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@mipmap/edit_email_section"
 
         android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="3dp"
 
-        app:layout_constraintBottom_toTopOf="@id/edit_password"
-        app:layout_constraintTop_toBottomOf="@id/edit_phone_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_number"
+        app:layout_constraintBottom_toTopOf="@id/password"
+
+        android:hint="Email here"
+        android:textAlignment="center"
         />
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/edit_password"
-        android:layout_width="match_parent"
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@mipmap/edit_password_section"
 
         android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
 
-        app:layout_constraintBottom_toTopOf="@id/save_button"
-        app:layout_constraintTop_toBottomOf="@id/edit_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintBottom_toTopOf="@+id/save_button"/>
 
     <android.support.v7.widget.AppCompatImageButton
         android:id="@+id/save_button"
@@ -99,14 +127,20 @@
         android:background="@mipmap/save_button"
 
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="150dp"
 
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_password"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        />
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"
+
+
         />
 
 </android.support.constraint.ConstraintLayout>
