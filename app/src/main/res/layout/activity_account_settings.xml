@@ -7,11 +7,14 @@
     tools:context=".account_settings"
     android:background="#E7E7E7">
 
-    <android.support.v7.widget.AppCompatImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/account_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@mipmap/logo"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/logo"
+        app:civ_border_width="0.8dp"
+        app:civ_border_color="#511010"
 
         android:layout_marginStart="8dp"
         android:layout_marginTop="160dp"
@@ -22,6 +25,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintBottom_toTopOf="@id/first_name"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/change_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change_picture"
+        android:textColor="#BC4343"
+
+
+        app:layout_constraintTop_toBottomOf="@id/account_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:clickable="true"
+        android:focusable="true"
+        />
 
 
     <android.support.v7.widget.AppCompatEditText
@@ -41,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/account_image"
         app:layout_constraintBottom_toTopOf="@id/last_name"
 
-        android:hint="First Name"
+        android:hint="@string/first_name"
         android:paddingLeft="100dp"
         />
 
@@ -61,8 +80,11 @@
         app:layout_constraintTop_toBottomOf="@+id/first_name"
         app:layout_constraintBottom_toTopOf="@id/phone_number"
 
-        android:hint="Last Name"
-        android:paddingLeft="100dp"/>
+        android:hint="@string/last_name"
+        android:paddingLeft="100dp"
+
+
+        />
 
     <android.support.v7.widget.AppCompatEditText
         android:id="@+id/phone_number"
@@ -80,7 +102,7 @@
         app:layout_constraintTop_toBottomOf="@+id/last_name"
         app:layout_constraintBottom_toTopOf="@id/email"
 
-        android:hint="+01007575761"
+        android:hint="@string/phone_number"
         android:paddingLeft="130dp"
         />
 
@@ -100,7 +122,7 @@
         app:layout_constraintTop_toBottomOf="@+id/phone_number"
         app:layout_constraintBottom_toTopOf="@id/password"
 
-        android:hint="Email here"
+        android:hint="@string/email"
         android:textAlignment="center"
         />
 
@@ -139,8 +161,6 @@
 
     <include layout="@layout/toolbar"
         android:id="@+id/toolbar"
-
-
         />
 
 </android.support.constraint.ConstraintLayout>

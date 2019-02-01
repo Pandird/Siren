@@ -5,5 +5,11 @@
 
     <string name="email_hint">Username or E-mail</string>
     <string name="Password_hint">Password</string>
-
+    <string name="change_picture">change picture </string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone_number">+01000000000</string>
+    <string name="email">Email here</string>
+    <string name="street_name">Street Name</string>
+    <string name="description">type your description here</string>
 </resources>
