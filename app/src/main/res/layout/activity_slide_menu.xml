@@ -23,6 +23,8 @@
         app:menu="@menu/activity_slide_menu_drawer"
         android:background="@drawable/main_header_selector"
         android:paddingTop="50dp"
+
+        app:itemTextColor="@color/colorAccent"
         />
 
 </android.support.v4.widget.DrawerLayout>
