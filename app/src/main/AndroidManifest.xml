@@ -44,7 +44,11 @@
             android:screenOrientation="sensorPortrait" />
         <activity android:name=".request_confirmation" />
         <activity android:name=".settings" />
-        <activity android:name=".account_settings"></activity>
+        <activity android:name=".account_settings" />
+        <activity
+            android:name=".slide_menu"
+            android:label="@string/title_activity_slide_menu"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
