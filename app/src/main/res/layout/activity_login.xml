@@ -15,10 +15,10 @@
 
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="8dp"
         android:background="@mipmap/sign_up"
 
-        app:layout_constraintBottom_toTopOf="@id/login_button"
+        app:layout_constraintBottom_toTopOf="@id/google_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
@@ -26,16 +26,17 @@
 
         />
 
-    <android.support.v7.widget.AppCompatTextView
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/google_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sign_up_question"
-        android:textColor="@color/colorAccent"
+        android:background="@mipmap/login_by_google"
+
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/sign_up_button"
-        android:layout_marginBottom="2dp"
+        app:layout_constraintTop_toBottomOf="@id/login_button"
         />
 
     <android.support.v7.widget.AppCompatImageButton
